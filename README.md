@@ -1,6 +1,6 @@
-# 🖥️ 8-Bit Single-Cycle CPU (Verilog, Harvard Architecture)
+#  8-Bit Custom-Single-Cycle CPU (Verilog, Harvard Architecture)
 
-🔗 Repo: [8-bit-Single-Cycle-CPU](https://github.com/SAI-SRIVARDHAN-REDDY-LINGALA/8-bit-Single-Cycle-CPU/tree/main)
+ Repo: [8-bit-Single-Cycle-CPU](https://github.com/SAI-SRIVARDHAN-REDDY-LINGALA/8-bit-Single-Cycle-CPU/tree/main)
 
 A custom-built 8-bit single-cycle CPU written from scratch in Verilog. Built for learning core CPU
 design concepts — datapath, control unit, ALU, register file, and memory — as a stepping stone
@@ -8,7 +8,7 @@ toward a full RISC-V core.
 
 ---
 
-## 📐 Architecture Summary
+##  Architecture Summary
 
 | Feature             | Spec                                              |
 |----------------------|----------------------------------------------------|
@@ -46,7 +46,7 @@ toward a full RISC-V core.
 
 ---
 
-## ⚙️ Datapath
+##  Datapath
 
 ![Datapath Architecture](Architecture.png)
 
@@ -83,7 +83,7 @@ toward a full RISC-V core.
 
 ---
 
-## ⏱️ Timing
+##  Timing
 
 Single-cycle critical path is dominated by LOAD (it touches memory twice):
 
@@ -96,7 +96,7 @@ Max theoretical clock: **~1.47 GHz**. (Testbench actually runs at 100 MHz for si
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ```bash
 iverilog -o cpu_sim alu.v register_file.v control_unit.v instr_mem.v data_mem.v cpu.v cpu_tb.v
@@ -118,7 +118,7 @@ Set buses to Hex and read top-to-bottom right after each `posedge clk`.
 
 ---
 
-## 🚧 Known Limitations
+##  Known Limitations
 
 - No conditional branching — only unconditional `JMP`, so backward jumps with no exit loop forever.
 - Memory/register file contents start undefined (`x`) until written.
@@ -127,7 +127,7 @@ Set buses to Hex and read top-to-bottom right after each `posedge clk`.
 
 ---
 
-## 🛣️ Future Improvements / Roadmap
+##  Future Improvements / Roadmap
 
 - **Near-term:** Add `BEQ`/`BNE` using the existing `zero_flag`; initialize memory contents;
   make memory reads synchronous for FPGA BRAM compatibility.
@@ -140,7 +140,7 @@ Set buses to Hex and read top-to-bottom right after each `posedge clk`.
 
 ---
 
-## 📚 Repo Structure
+##  Repo Structure
 
 ```
 8-bit-cpu/
