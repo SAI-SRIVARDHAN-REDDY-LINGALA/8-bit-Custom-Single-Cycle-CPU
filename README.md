@@ -48,7 +48,7 @@ toward a full RISC-V core.
 
 ## ⚙️ Datapath
 
-![Datapath Architecture](images/architecture.png)
+![Datapath Architecture](Architecture.png)
 
 - **ALU input A** is always `reg_data_d` (the destination register's current value).
 - **ALU input B** is a mux: `imm` if `alu_src_b_is_imm = 1`, else `reg_data_s`.
@@ -114,7 +114,7 @@ control signals (`reg_write_en`, `mem_write_en`, `jump_en`, `alu_src_b_is_imm`, 
 `reg_data_d`, `reg_data_s` → `alu_op`, `alu_in_b`, `alu_result` → `data_mem_out`, `write_back_data`.
 Set buses to Hex and read top-to-bottom right after each `posedge clk`.
 
-![GTKWave Simulation Waveform](images/waveform.png)
+![GTKWave Simulation Waveform](waveform.png)
 
 ---
 
